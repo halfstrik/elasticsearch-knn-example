@@ -14,8 +14,8 @@ pip install -r requirements.txt
 Setup Elasticsearch locally in docker (knn index not working, use AWS):
 ```
 docker network create elastic
-docker pull artifactory-dockerhub.cloud.capitalone.com/elasticsearch:7.1.1
-docker run --name es01-test --net elastic -p 127.0.0.1:9200:9200 -p 127.0.0.1:9300:9300 -e "discovery.type=single-node" artifactory-dockerhub.cloud.capitalone.com/elasticsearch:7.1.1
+docker pull elasticsearch:7.17.4
+docker run --name es01-test --net elastic -p 127.0.0.1:9200:9200 -p 127.0.0.1:9300:9300 -e "discovery.type=single-node" elasticsearch:7.17.4
 ```
 
 CloudSentry creds:
